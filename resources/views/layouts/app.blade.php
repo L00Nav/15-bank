@@ -9,23 +9,21 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <script>0</script>
     <div id="app">
+        <!-- Top -->
         <header class="titleBlock">
             <h1 class="title">OmniCorp's Bank Division</h1>
             <h4 class="titleQuote">All your life savings are with us</h4>
         </header>
+        <!-- Nav -->
         <div class="contentContainer">
             <nav  class="navBlock contentBox">
                 <a href="accounts" class="navLink">Accounts</a>
@@ -33,7 +31,7 @@
                 <a href="addFunds" class="navLink">Add funds</a>
                 <a href="withdrawFunds" class="navLink">Withdraw funds</a>
             </nav>
-            <main  class="mainContetBlock contentBox left py-4">
+            <main  class="mainContetBlock contentBox left">
                 @yield('content')
             </main>
         </div>

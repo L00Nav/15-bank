@@ -36,8 +36,33 @@ class HomeController extends Controller
         return view('login');
     }
     
+    public function accounts()
+    {
+        return view('accounts');
+    }
+    
+    public function createAccount()
+    {
+        return view('createaccount');
+    }
+    
     public function addFunds()
     {
         return view('addfunds');
+    }
+    
+    public function withdrawFunds()
+    {
+        return view('withdrawfunds');
+    }
+    
+    public function adminLogin()
+    {
+        return view('adminlogin');
+    }
+    
+    public function createAdmin()
+    {
+        return view('createadmin');
     }
 }

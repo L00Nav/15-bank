@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 Auth::routes();
@@ -23,6 +23,16 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/test', [App\Http\Controllers\HomeController::class, 'test'])->name('test');
 
+Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
+
+Route::get('/accounts', [App\Http\Controllers\HomeController::class, 'accounts'])->name('accounts');
+
+Route::get('/createaccount', [App\Http\Controllers\HomeController::class, 'createAccount'])->name('createaccount');
+
 Route::get('/addfunds', [App\Http\Controllers\HomeController::class, 'addFunds'])->name('addfunds');
 
-Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
+Route::get('/withdrawfunds', [App\Http\Controllers\HomeController::class, 'withdrawFunds'])->name('withdrawfunds');
+
+Route::get('/adminlogin', [App\Http\Controllers\HomeController::class, 'adminLogin'])->name('adminlogin');
+
+Route::get('/createadmin', [App\Http\Controllers\HomeController::class, 'createAdmin'])->name('createadmin');
