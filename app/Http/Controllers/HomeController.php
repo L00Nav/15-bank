@@ -28,41 +28,41 @@ class HomeController extends Controller
     
     public function test()
     {
-        return view('test');
+        return view('pages.test');
     }
     
     public function login()
     {
-        return view('login');
+        return view('pages.login');
     }
     
     public function accounts()
     {
-        return view('accounts');
+        return view('pages.accounts');
     }
     
     public function createAccount()
     {
-        return view('createaccount');
+        return view('pages.createaccount');
     }
     
     public function addFunds()
     {
-        return view('addfunds');
+        return view('pages.addfunds');
     }
     
     public function withdrawFunds()
     {
-        return view('withdrawfunds');
+        return view('pages.withdrawfunds');
     }
     
     public function adminLogin()
     {
-        return view('adminlogin');
+        return view('pages.adminlogin');
     }
     
     public function createAdmin()
     {
-        return view('createadmin');
+        return view('pages.createadmin');
     }
 }
