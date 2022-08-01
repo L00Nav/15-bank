@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +22,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        DB::table('users')->insert([
+            'fname' => 'beaver',
+            'lname' => 'blue',
+            'email' => 'beaver@gmail.com',
+            'pnumber' => 12345678901,
+            'anumber' => 'LT-123456789',
+            'password' => Hash::make('123')
+        ]);
     }
 }

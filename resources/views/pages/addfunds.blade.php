@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-@if (!$userAuth ?? false)
+@if (!$userAuth)
     Log in to manage your funds.
 @endif
-@if ($userAuth ?? false)
+@if ($userAuth)
         <?php echo ($account['lname'].' '.$account['fname'].'<br>') ?>
         <?php echo ($account['funds'].' €<br>') ?>
         <form class="left" action="deposit" method="post"><hr><br>

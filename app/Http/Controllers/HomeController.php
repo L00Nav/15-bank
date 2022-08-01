@@ -38,22 +38,30 @@ class HomeController extends Controller
     
     public function accounts()
     {
-        return view('pages.accounts');
+        $accounts = [[
+            'lname' => 'Noname',
+            'fname' => 'Luna',
+            'email' => 'Lunar@biscuit.com',
+            'pnumber' => '123',
+            'anumber' => '123',
+            'funds' => '420.69'
+        ]];
+        return view('pages.accounts', ['adminAuth' => false, 'userAuth' => true, 'accounts' => $accounts]);
     }
     
     public function createAccount()
     {
-        return view('pages.createaccount');
+        return view('pages.createaccount', ['iban' => 132]);
     }
     
     public function addFunds()
     {
-        return view('pages.addfunds');
+        return view('pages.addfunds', ['userAuth' => false]);
     }
     
     public function withdrawFunds()
     {
-        return view('pages.withdrawfunds');
+        return view('pages.withdrawfunds', ['userAuth' => false]);
     }
     
     public function adminLogin()

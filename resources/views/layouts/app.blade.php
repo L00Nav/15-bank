@@ -22,6 +22,8 @@
     <script>0</script>
     <div id="app">
         @include('parts.top')
+        @include('parts.accountbar')
+        @include('parts.messages')
         <div class="contentContainer">
             @include('parts.nav')
             <main  class="mainContetBlock contentBox left">
